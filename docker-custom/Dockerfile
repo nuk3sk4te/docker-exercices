@@ -1,18 +1,20 @@
+
+# Parti 
 FROM ubuntu:latest
 
-# Update and install dependencies
-RUN apt-get update && apt-get install -y apache2 php8.1 openssl && \
-    apt-get install -y libcurl4-openssl-dev libssl-dev pkg-config && \
-    a2enmod mpm_prefork && \
-    a2enmod rewrite && \
-    sed -i 's/MPM\ default/MPM\ prefork/g' /etc/apache2/apache2.conf && \
-    service apache2 restart
+ENV CONTAINER_TIMEZONE="Europe/Brussels"
+RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
 
-    
-# Copy the custom Apache configuration file
-COPY apache.conf /etc/apache2/apache2.conf
+RUN apt update && apt install -y apache2 php libapache2-mod-php
 
-# Expose ports
-EXPOSE 80
-# Start Apache in the foreground
-CMD ["apachectl", "-D", "FOREGROUND"]
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_RUN_DIR /var/www/html
+
+#RUN echo 'Hello, docker' > /var/www/html/index.html
+COPY index.html /var/www/html/index.html
+
+ENTRYPOINT ["/usr/sbin/apache2"]
+CMD ["-D", "FOREGROUND"]
+
