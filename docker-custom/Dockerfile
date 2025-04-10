@@ -1,5 +1,7 @@
 
-# Parti 
+# Dockerfile for a simple Apache web server with PHP support
+# This Dockerfile sets up an Apache web server with PHP support on an Ubuntu base image.
+ 
 FROM ubuntu:latest
 
 ENV CONTAINER_TIMEZONE="Europe/Brussels"
@@ -13,7 +15,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_RUN_DIR /var/www/html
 
 #RUN echo 'Hello, docker' > /var/www/html/index.html
-COPY index.html /var/www/html/index.html
+COPY index.html estilos.css /var/www/html/
 
 ENTRYPOINT ["/usr/sbin/apache2"]
 CMD ["-D", "FOREGROUND"]

@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>FuryBit </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Site</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Site de Prueba</h1>
-    <p>Site de prueba para verificar que el servidor Apache está funcionando correctamente.</p>
-    <p>Fecha y hora actual: <?php echo date('Y-m-d H:i:s'); ?></p>
-    <p>PHP versión: <?php echo phpversion(); ?></p>
-    <p>Apache versión: <?php echo $_SERVER['SERVER_SOFTWARE']; ?></p>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a FuryBit </h1>
+            <p>Somos una empresa líder en la industria de la tecnología y la innovación.</p>
+            <button>Descubre más</button>
+        </section>
+        <section class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>
+                    <i class="icon-1"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Desarrollamos sitios web personalizados y efectivos.</p>
+                </li>
+                <li>
+                    <i class="icon-2"></i>
+                    <h3>Marketing Digital</h3>
+                    <p>Incrementamos la visibilidad de tu marca en línea.</p>
+                </li>
+                <li>
+                    <i class="icon-3"></i>
+                    <h3>Soporte Técnico</h3>
+                    <p>Resolvemos problemas técnicos y aseguramos la disponibilidad de tus sistemas.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="testimonios">
+            <h2>Lo que nuestros clientes dicen de nosotros</h2>
+            <ul>
+                <li>
+                    <p>"FuryBit es una empresa innovadora y comprometida con la calidad."</p>
+                    <p>- Juan Pérez, Cliente</p>
+                </li>
+                <li>
+                    <p>"La atención al cliente de FuryBit es excepcional."</p>
+                    <p>- María Rodríguez, Cliente</p>
+                </li>
+                <li>
+                    <p>"La solución que me ofrecieron fue exactamente lo que necesitaba."</p>
+                    <p>- Carlos Gómez, Cliente</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 FuryBit . Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
