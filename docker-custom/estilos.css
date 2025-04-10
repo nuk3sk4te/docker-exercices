@@ -50,27 +50,18 @@ nav a:hover {
     color: #fff;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.hero-content {
+    width: 50%;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.hero-image {
+    width: 50%;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .servicios {
@@ -78,26 +69,21 @@ button:hover {
     padding: 20px;
 }
 
-.servicios h2 {
-    margin-top: 0;
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.servicios ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.servicio {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.servicios li {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: calc(33.33% - 20px);
-}
-
-.servicios i {
+.servicio i {
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -107,28 +93,45 @@ button:hover {
     padding: 20px;
 }
 
-.testimonios h2 {
-    margin-top: 0;
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.testimonios ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.testimonio {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.testimonios li {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: calc(33.33% - 20px);
-}
-
-.testimonios p {
+.testimonio p {
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.testimonio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    margin-right: 20px;
+}
+
+.redes-sociales a i {
+    font-size: 24px;
+    color: #333;
 }
 
 footer {
