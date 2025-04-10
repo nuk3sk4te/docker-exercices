@@ -11,7 +11,7 @@
 
 ## Run 
 # Use the following command to run the Docker container
-# docker run -d -p 80:80 -p 443:443 --name custom-apache-container custom-apache
+# docker run -d -p 8080:80 -p 8443:443 --name custom-apache-container custom-apache
 
 # Use the following command to stop the Docker container
-# docker stop custom-apache-container   
+# docker stop custom-apache-container   # prueba
