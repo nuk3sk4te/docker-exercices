@@ -5,17 +5,18 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #444;
+    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #333;
+    background-color: #4a90e2;
     color: #fff;
-    padding: 1em;
+    padding: 1.5em;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -23,79 +24,106 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav li {
-    margin-right: 20px;
+    margin: 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ccc;
+    background-color: #fff;
+    color: #4a90e2;
 }
 
 .hero {
-    background-image: linear-gradient(to bottom, #333, #555);
-    background-size: 100% 300px;
-    background-position: 0% 100%;
-    height: 300px;
+    background-image: linear-gradient(to bottom, #4a90e2, #357ab7);
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content {
-    width: 50%;
+    max-width: 600px;
 }
 
-.hero-image {
-    width: 50%;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.hero p {
+    font-size: 1.2rem;
 }
 
 .servicios {
-    background-color: #f7f7f7;
-    padding: 20px;
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
 }
 
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .servicio {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .servicio i {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    color: #4a90e2;
+    margin-bottom: 15px;
 }
 
 .testimonios {
-    background-color: #f7f7f7;
-    padding: 20px;
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
 }
 
 .testimonios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -104,40 +132,54 @@ nav a:hover {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .testimonio p {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
 }
 
 .testimonio img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .redes-sociales {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .redes-sociales a {
-    margin-right: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1);
 }
 
 .redes-sociales a i {
     font-size: 24px;
-    color: #333;
+    color: #4a90e2;
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 1em;
+    padding: 1.5em;
     text-align: center;
-    clear: both;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
