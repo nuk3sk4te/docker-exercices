@@ -1,7 +1,6 @@
 
 # Dockerfile for a simple Apache web server with PHP support
-# This Dockerfile sets up an Apache web server with PHP support on an Ubuntu base image.
- 
+# This Dockerfile sets up an Apache web server with PHP support on an Ubuntu base image. 
 FROM ubuntu:latest
 
 ENV CONTAINER_TIMEZONE="Europe/Brussels"
